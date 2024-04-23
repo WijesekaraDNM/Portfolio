@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Personal Portfolio website Design | WijesekaraDNM</title>
+
+        <!-- box icons-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!--custom css-->
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--header design-->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            
+            <i class='bx bx-menu' id="menu-icon"></i>
+
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contacts">Contact</a>
+            </nav>
+        </header>
+        <section class="home" id="home">
+            <div class="home-content" id="home-content">
+                <h3>Hello, It's me</h3>
+                <h1>Nuwani Wijesekara</h1>
+                <div class="changing-text">
+                    <h3>And I'm a </h3>
+                    <h3>
+                        <span class="word">&nbsp;&nbsp;Full-stack&nbsp;Developer</span>
+                        <span class="word">&nbsp;&nbsp;UI/UX&nbsp;Designer</span>
+                        <span class="word">&nbsp;Mobile &nbsp;App&nbsp;Developer</span>
+                        <span class="word">&nbsp;Computer&nbsp;Hardware&nbsp;Designer</span>
+                    </h3>
+                </div>
+                <p>I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineering, 
+                    University of Ruhuna and reading for a B.Sc. Eng.(Hons) Degree in Computer Engineering.
+                    My profound passion for creativity and problem-solving skills propel me toward a fervent interest in
+                    web development, software development, mobile app development, and computer hardware designs.
+
+                   </p>
+                <div class="social-media">
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>   
+                <a href="#" class="btn">Download CV</a> 
+            </div>
+            <div class="profile-pic">
+                <div class="img-box">
+                    <img  src="images/ProfilePic.png" alt="">
+                </div>
+                <div class="liquid-shape">
+                    <svg viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                        <path style="filter: drop-shadow(0px 0px 10px #0fd);"  fill="#0fd">
+                            <animate 
+                                style="box-shadow: 0 0 100rem 0 #0fd;"
+                                attributeName="d"
+                                dur="20000ms"
+                                repeatCount="indefinite"
+                                values="
+                               
+                                M456,304Q418,358,372,387Q326,416,275,424.5Q224,433,196,389Q168,345,101.5,329Q35,313,80,263Q125,213,146,183.5Q167,154,200.5,146.5Q234,139,286.5,97Q339,55,395,88Q451,121,472.5,185.5Q494,250,456,304Z;
+                                M411,283.5Q354,317,328.5,341.5Q303,366,267,373.5Q231,381,193,370.5Q155,360,87.5,339Q20,318,34,254.5Q48,191,90,152.5Q132,114,177,83.5Q222,53,275,65.5Q328,78,350.5,124.5Q373,171,420.5,210.5Q468,250,411,283.5Z;
+                                M400.63296,279.35318Q341.55955,308.70637,329.01835,351.86704Q316.47715,395.02771,274.25693,383.34869Q232.0367,371.66966,170.71086,392.27079Q109.38502,412.87191,113.93595,350.9221Q118.48689,288.97229,91.53708,242.5779Q64.58727,196.18352,105.55056,163.38539Q146.51386,130.58727,189.44045,130.15168Q232.36704,129.7161,291.58727,79.4955Q350.80749,29.27491,372.78914,92.88053Q394.77079,156.48614,427.23858,203.24307Q459.70637,250,400.63296,279.35318Z;
+                                M392,307Q428,364,381.5,400Q335,436,279,437.5Q223,439,188,400.5Q153,362,146,322.5Q139,283,144.5,252Q150,221,140.5,167Q131,113,183,128Q235,143,268,140.5Q301,138,359.5,140Q418,142,387,196Q356,250,392,307Z;
+                                M409,284.5Q358,319,343,370Q328,421,275.5,428Q223,435,156.5,434.5Q90,434,111.5,359Q133,284,114,244.5Q95,205,138.5,188.5Q182,172,208,156Q234,140,266.5,142Q299,144,371,135Q443,126,451.5,188Q460,250,409,284.5Z;
+                                M357.68389,281.90828Q349.70649,313.81655,323.82125,334.23423Q297.93602,354.6519,263.57808,375.12885Q229.22013,395.60581,180.86219,390.44071Q132.50425,385.27561,142.60067,332.04608Q152.69709,278.81655,127.47696,242.94497Q102.25682,207.07338,130.20649,175.54139Q158.15615,144.00939,189.85794,98.9821Q221.55973,53.9548,282.05034,50.77136Q342.54094,47.58791,356.48635,110.11946Q370.43176,172.65101,368.04653,211.32551Q365.66129,250,357.68389,281.90828Z;
+                                M436.11215,311.11262Q440.91309,372.22524,366.89206,357.9729Q292.87103,343.72056,262.9785,356.05934Q233.08598,368.39813,166.72056,396.08598Q100.35514,423.77383,78.16729,365.1771Q55.97943,306.58038,46.81261,247.08598Q37.64579,187.59159,62.57056,124.92523Q87.49532,62.25887,158.3229,83.12383Q229.15047,103.98879,284.56449,79.02664Q339.9785,54.06449,388.66636,92.10234Q437.35421,130.14018,434.33271,190.07009Q431.31122,250,436.11215,311.11262Z;
+                                M456,304Q418,358,372,387Q326,416,275,424.5Q224,433,196,389Q168,345,101.5,329Q35,313,80,263Q125,213,146,183.5Q167,154,200.5,146.5Q234,139,286.5,97Q339,55,395,88Q451,121,472.5,185.5Q494,250,456,304Z;
+                                "
+                            >
+                            </animate>
+                        </path>
+                    </svg>
+                </div>
+                <div class="liquid-shape2">
+                    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                        <path  style="filter: drop-shadow(0px 0px 10px #0fd);" fill="#0fd">
+                            <animate 
+                                box-shadow="0 0 100rem 0 #0fd"
+                                attributeName="d"
+                                dur="20000ms"
+                                repeatCount="indefinite"
+                                values="
+                                M313.5,291.5Q250,333,129.5,291.5Q9,250,129.5,221Q250,192,313.5,221Q377,250,313.5,291.5Z;
+                                M370.5,335Q250,420,165,335Q80,250,165,198Q250,146,370.5,198Q491,250,370.5,335Z;
+                                M363,288.5Q250,327,155,288.5Q60,250,155,150Q250,50,363,150Q476,250,363,288.5Z;
+                                M299.5,328Q250,406,130.5,328Q11,250,130.5,133.5Q250,17,299.5,133.5Q349,250,299.5,328Z;
+                                M313.5,291.5Q250,333,129.5,291.5Q9,250,129.5,221Q250,192,313.5,221Q377,250,313.5,291.5Z;
+                                "
+                            >
+                            </animate>
+                        </path>
+                      </svg>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--about section design-->
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Frontend Developer</h3>
+                <p>I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineering, 
+                    University of Ruhuna and reading for a B.Sc. Eng.(Hons) Degree in Computer Engineering.
+                    My profound passion for creativity and problem-solving skills propel me toward a fervent interest in
+                    web development, software development, mobile app development, and computer hardware designs.
+                    <span onclick="more">
+                    In addition to these pursuits, I am inherently open-minded, consistently seeking innovative
+                    solutions, and find immense thrill in observing and embracing novel outcomes. 
+                    My journey is characterized by a commitment to continuous learning and an unwavering 
+                    passion for pushing the boundaries of what's possible in the technological landscape.</span></p>
+                <a href="#"  class="btn">Read More</a>
+            </div>
+        </section>
+        <!--service section-->
+        <section class="services" id="services">
+            <h2 class="heading">Our <span>Services</span></h2>
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bx-code-alt' style='color:#ffffff'  ></i>
+                    <h3 class="web-development">Web Development</h3>
+                    <p>
+                        I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                    </p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class='bx bx-paint'></i>
+                    <h3 class="hardware-development"> Development</h3>
+                    <p>
+                        I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                    </p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class='bx bxs-devices'></i>
+                    <h3 class="software-development">Software Development</h3>
+                    <p>
+                        I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                    </p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <!--skills-->
+        <section class="skills" id="skills">
+            <h2>My <span>Skills</span></h2>
+            <div class="skillIcons" >
+                <i class='bx bxl-react bx-rotate-90 bx-spin' style='color:#16b2dc'  ></i>
+                <img src="images/icons/vs-code.256x256.png" class="pulse" alt=""></img>
+                <i class='bx bxl-github bx-fade-up' style='color:#ffffff' ></i>
+                <i class='bx bxl-html5 bx-rotate-90 bx-tada' style='color:#d26a04'  ></i>              
+                <i class='bx bxl-css3 bx-fade-up' style='color:#06bbc1'  ></i>
+                <i class='bx bxl-javascript bx-flashing' style='color:#dbf105' ></i>
+                <img src="images/icons/c-sharp-c.228x256.png" class="pulse" alt=""></img> 
+                <img src="images/icons/linux.220x256.png" class="bounce" alt=""></img>
+                <img src="images/icons/file-type-matlab.256x233.png" class="pulse" alt=""></img>
+                <img src="images/icons/materialui-original.256x203.png" class="bounce" alt=""></img>              
+                <i class='bx bxl-nodejs bx-rotate-90 bx-tada' style='color:#3d9643'  ></i>
+                <img src="images/icons/python.256x254.png" alt="" class="spin" ></img>
+                <img src="images/icons/kotlin-original.256x256.png" style="padding: .5rem;" class="pulse" alt=""></img>
+                <i class='bx bxl-c-plus-plus bx-rotate-90 bx-tada' style='color:#03d89f'  ></i>
+                <img src="images/icons/aws.256x153.png" class="bounce" style="background-color: #ffffff; border-radius: 10%; padding: 0.5rem; height: 7.5rem; width: 7.5rem;" alt=""></img> 
+                <i class='bx bxl-firebase bx-flashing' style='color:#d8ac03' ></i>
+                <img src="images/icons/tailwind-css.256x154.png" class="shake" alt=""></img>
+                <img src="images/icons/figma.171x256.png" class="pulse" alt=""></img>
+                <img src="images/icons/android-studio.242x256.png" class="spin" alt=""></img>
+                <img src="images/icons/visual-studio.256x255.png" class="pulse" alt=""></img>
+                <i class='bx bxl-bootstrap bx-tada' style='color:#05609e' ></i>
+                <img src="images/icons/c-original.223x256.png" class="pulse" alt=""></img>
+                <img src="images/icons/java-original.189x256.png" alt="" class="bounce" ></img>           
+                <i class='bx bxl-mongodb bx-burst' style='color:#39c504' ></i>
+                <img src="images/icons/mysql-original-wordmark.256x133.png" class="pulse" alt=""></img>  
+                <img src="images/icons/file-type-verilog.256x256.png" class="shake" alt=""></img> 
+                <img src="images/icons/file-type-vhdl.256x256.png" class="pulse" style="padding: .5rem;" alt=""></img>   
+                            
+            </div>
+            <div class="skill-main">
+                <div class="technical-skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Figma</p>
+                            <p>95%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="figma"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>React</p>
+                            <p>90%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="react"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>HTML</p>
+                            <p>90%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="html"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Python</p>
+                            <p>85%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="python"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>JavaScript</p>
+                            <p>80%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="javascript"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Java</p>
+                            <p>75%</p>
+                        </div>
+                        <div class="bar">
+                            <span class="java"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-skills">
+                    <h3>Professional Skills</h3>
+                    <div class="skill-container">
+                        <div class="box">
+                                <div class="circle" data-dots="90" data-percent="95"></div>
+                                <div class="text">
+                                    <big>95%</big>
+                                    <small>Team Work</small>
+                                </div>
+                        </div>
+                        <div class="box">
+                                <div class="circle" data-dots="90" data-percent="85"></div>
+                                <div class="text">
+                                    <big>85%</big>
+                                    <small>Communication</small>
+                                </div>
+                
+                        </div>
+                        <div class="box">
+                                <div class="circle" data-dots="90" data-percent="80"></div>
+                                <div class="text">
+                                    <big>80%</big>
+                                    <small>Project Management</small>
+                                </div>
+                            
+                        </div>
+                        <div class="box">                 
+                                <div class="circle" data-dots="90" data-percent="75"></div>
+                                <div class="text">
+                                    <big>75%</big>
+                                    <small>Problem Solving</small>
+                                </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </section>
+        <!--projects-->
+        <section class="projects" id="services">
+            <h3>What I will do for you</h3>
+            <h2 class="heading">My <span>Projects</span></h2>
+            <div class="projects-container">
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="web-development">Disaster Management System</h3>
+                        <p>
+                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                        </p>
+                        
+                        <a href="#" class="btn"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="web-development">Disaster Management System</h3>
+                        <p>
+                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                        </p>
+                        <a href="#" class="btn"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="web-development">Disaster Management System</h3>
+                        <p>
+                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                        </p>
+                        <a href="#" class="btn"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="web-development">Disaster Management System</h3>
+                        <p>
+                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                        </p>
+                        <a href="#" class="btn"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="web-development">Disaster Management System</h3>
+                        <p>
+                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                        </p>
+                        <a href="#" class="btn"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="web-development">Disaster Management System</h3>
+                        <p>
+                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                        </p>
+                        <a href="#" class="btn"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!--contact-->
+        <section class="contacts" id="contacts">
+            <h2>Contact <span>Me</span></h2>
+            <form class="contact-form">
+                <div class="inline">
+                    <div class="input-border">
+                        <input type="text" placeholder="Full Name" id="name">
+                    </div>
+                    <div class="input-border">
+                        <input type="tel" placeholder="Mobile Number" id="mobileNumber">
+                    </div>
+                </div>
+                <div class="inline">
+                    <div class="input-border">
+                        <input type="email" placeholder="Email Address" id="emailAddress">
+                    </div>
+                    <div class="input-border">
+                        <input type="text" placeholder="Email Subject" id="emailSubject">
+                    </div>
+                </div>
+                <div class="textArea-border">
+                    <textarea placeholder="Enter your message" id="message"></textarea>
+                </div>
+                <div class="inline">
+                    <a href="#" class="btn">Submit</a> 
+                </div>  
+            </form>
+        </section>
+        <!--custom js-->
+        <script src="script.js"></script>
+    </body>
+</html>
