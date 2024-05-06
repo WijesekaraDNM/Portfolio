@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     let words = document.querySelectorAll(".word");
     words.forEach((word) =>{
@@ -61,38 +64,65 @@ document.addEventListener("DOMContentLoaded", function() {
     });   
  });  
 
-//document.addEventListener('DOMContentLoaded', function() {
-    // const circles = document.querySelectorAll('.circle');
+//contacts
+const form = document.querySelector("contact-form");
+const fullName = document.getElementById("name");
+const mobileNumber = document.getElementById("mobileNumber");
+const email = document.getElementById("emailAddress");
+const subject = document.getElementById("emailSubject");
+const message = document.getElementById("message");
 
-    // console.log("Number of circles found:", circles.length);
+function sendEmail(){
 
-    // circles.forEach(circle => {
-    //     const dots = parseInt(circle.getAttribute("data-dots"));
-    //     const marked = parseInt(circle.getAttribute("data-percent"));
-    //     const percent = Math.floor(dots * marked / 100);
-    //     let points = "";
-    //     const rotate = 360 / dots;
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${emailAddress.value}
+     <br> Phone Number: ${mobileNumber.value} <br> Message: ${message.value} `;
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "99.wijesekara@gmail.com",
+        Password : "1A5A24B4D3F53A317C1F90F4FF2FD80E5B4A",
+        To : "99.wijesekara@gmail.com",
+        From : "99.wijesekara@gmail.com",
+        Subject : subject.value,
+        Body : bodyMessage
+    }).then(
+        message => {
+            if (message == "OK"){
+                Swal.fire({
+                    title: "Success!",
+                    text: "Message sent successfully!",
+                    icon: "success"
+                });
+            }
+        }
+    ).catch(
+        error => console.error(error)
+    );
+}
 
-    //     console.log("Dots:", dots);
-    //     console.log("Marked:", marked);
-    //     console.log("Percent:", percent);
+form.addEventListener("submit", (e)=> {
+    checkInputs();
+    sendEmail();
+});
 
-    //     for (let i = 0; i < dots; i++) {
-    //         points += `<div class="points" style="--i:${i}; --rot:${rotate}deg"></div>`;
-    //     }
+function checkInputs(){
+    const items = document.querySelectorAll(".item");
 
-    //     circle.innerHTML = points;
+    for (const item of items ){
+        if(item.value == ""){
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
 
-    //     const pointsMarked = circle.querySelectorAll('.points');
+        }
 
-    //     console.log("Number of points:", pointsMarked.length);
-
-    //     pointsMarked.forEach((point, index) => {
-    //         if (index < percent) {
-    //             point.classList.add('marked');
-    //         }
-    //     });
-    // });
-//});
-
-
+        item.addEventListener("keyup", () =>{
+            if (item.value != ""){
+                item.classList.remove("error");
+                item.parentElement.classList.remove("error");
+            }
+            else{
+                item.classList.add("error");
+                item.parentElement.classList.add("error");
+            }
+        })
+    }
+}
