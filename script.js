@@ -42,6 +42,48 @@ document.addEventListener("DOMContentLoaded", function() {
     changingText();
     setInterval(changingText, 3000);
 });
+// education
+
+window.addEventListener('scroll', function() {
+    var element0 = document.getElementById('targetElement0');
+    var element1 = document.getElementById('targetElement1');
+    var element2 = document.getElementById('targetElement2');
+
+    animateIfInView(element0);
+    animateIfInView(element1);
+    animateIfInView(element2);
+});
+
+function animateIfInView(element) {
+    var position = element.getBoundingClientRect();
+
+    // Check if the top of the element is within the viewport
+    if (position.top >= 0 && position.top <= window.innerHeight) {
+        element.classList.add('animate');
+    } else {
+        element.classList.remove('animate');
+    }
+}
+
+
+// about
+
+function moreFunction(){
+    var dots = document.getElementById("dotsId");
+    var moreText = document.getElementById("more");
+    var btn = document.getElementById("moreId");
+    if(dots.style.display === "none"){
+        dots.style.display = "inline";
+        btn.innerHTML ="Read more";
+        moreText.style.display = "none";
+    }else{
+        dots.style.display = "none";
+        btn.innerHTML = "Read less";
+        moreText.style.display = "inline"
+    }
+}
+
+
 // circle skills
  document.addEventListener("DOMContentLoaded", function() {
     const circles = document.querySelectorAll('.circle');
