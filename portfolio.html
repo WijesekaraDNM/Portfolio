@@ -9,23 +9,26 @@
         <!-- box icons-->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!--custom css-->
+        <!-- fontawesome icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!--header design-->
         <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-            
-            <i class='bx bx-menu' id="menu-icon"></i>
-
-            <nav class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#Projects">Projects</a>
-                <a href="#Contacts">Contact</a>
-            </nav>
+                <a href="#" class="logo">WijesekaraDNM</a>
+                <input type="checkbox" id="check">
+                <nav class="menu">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contacts">Contact</a>
+                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
+                </nav>
+                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
+           
         </header>
         <section class="home" id="home">
             <div class="home-content" id="home-content">
@@ -107,13 +110,13 @@
             </div>
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
-                <h3>Frontend Developer</h3>
+                <h3>Innovative Computer Engineer</h3>
                 <p>I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineering, 
                     University of Ruhuna and reading for a B.Sc. Eng.(Hons) Degree in Computer Engineering.
                     Throughout my university life, I have been able to gain a lot of
                     experiences and knowladge in the field of computer engineering.
                     I have worked on diverse project related to web development, desktop application development
-                    , mobile application development developmnet, computer hardware designing and also 
+                    , mobile application development, computer hardware designing and also 
                     machine learning base project. Further I have experience on UI/UX design, Versioon Control, Agile methodology and Scrum.<span class="dots" id="dotsId">...</span>
                     <span class="more" id="more">
                     In addition to these pursuits, I am inherently open-minded, consistently seeking innovative
@@ -167,7 +170,7 @@
                     <p>
                         Craft intuitive interfaces, wireframes, prototypes and prioritize user experience, typography, color, layout.
                     </p>
-                    <a href="#" class="btn">Read More</a>
+                    <a href="https://www.linkedin.com/in/wijesekaradnm/" class="btn">Read More</a>
                 </div>
                 <div class="services-box">
                     <i class='bx bx-code-alt' style='color:#ffffff'  ></i>
@@ -175,7 +178,7 @@
                     <p>
                         Build dynamic websites utilizing set of languages and frameworks. Also integrate backend tech, ensure responsiveness.
                     </p>
-                    <a href="#" class="btn">Read More</a>
+                    <a href="https://www.linkedin.com/in/wijesekaradnm/" class="btn">Read More</a>
                 </div>
                 <div class="services-box">
                     <i class='bx bxs-devices'></i>
@@ -183,7 +186,7 @@
                     <p>
                         Experience in hardware description languages and processor design, coupled with PCB design and Proteus simulation.
                     </p>
-                    <a href="#" class="btn">Read More</a>
+                    <a href="https://www.linkedin.com/in/wijesekaradnm/" class="btn">Read More</a>
                 </div>
             </div>
         </section>
@@ -320,20 +323,29 @@
            
         </section>
         <!--projects-->
-        <section class="projects" id="services">
+        <section class="projects" id="projects">
             <h3>What I have done</h3>
             <h2 class="heading">My <span>Projects</span></h2>
             <div class="projects-container">
                 <div class="project-box">
                     <div id="0" class="project-slideShow">
+                        <div class="mySlides fade">
+                            <img src="images/projects/DMS/DMS1.png" alt="">
+                          </div>
+                          <div class="mySlides fade">
+                            <img src="images/projects/DMS/DMS2.png" alt="">
+                          </div>
+                          <div class="mySlides fade">
+                            <img src="images/projects/DMS/DMS5.png" alt="">
+                          </div>
                            <div class="mySlides fade">
-                            <img src="images/projects/PatientRegistrationSystem/patientRegistrationSystem.png" alt="">
+                            <img src="images/projects/DMS/DMS6.png" alt="">
                           </div>
                           <div class="mySlides fade">
-                            <img src="images/icons/android-studio.242x256.png" alt="">
+                            <img src="images/projects/DMS/DMS4.png" alt="">
                           </div>
                           <div class="mySlides fade">
-                            <img src="images/icons/materialui-original.256x203.png" alt="">
+                            <img src="images/projects/DMS/DMS7.png" alt="">
                           </div>
 
                     </div>
@@ -437,7 +449,7 @@
                     </div>
                 </div>
                 <div class="project-box">
-                    <div id="3" class="project-slideShow">
+                    <div id="4" class="project-slideShow">
                         <div class="mySlides fade">
                             <img src="images/projects/OnlineLibrary/Screenshot 2024-03-18 200835.png" alt="">
                         </div>
@@ -458,7 +470,7 @@
                     <div class="project-content">
                         <h3 class="web-development">Online Library Application</h3>
                         <p>
-                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                            A command-line based desktop application for patient registration, developed using C++ with data structures, WPF, MVVM architecture, and an SQLite database.
                         </p>
                         <div class="link">
                             <a href="#" class="btn"><i class='bx bxs-video ' ></i></a>
@@ -467,17 +479,40 @@
                     </div>
                 </div>
                 <div class="project-box">
-                    <div class="project-image">
-                        <img src="images/projects/patientRegistrationSystem.png" alt="">
+                    <div id="5" class="project-slideShow">
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH7.jpeg" alt="">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH1.jpeg" alt="">
+                        </div>     
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH2.jpeg" alt="">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH3.jpeg" alt="">
+                          </div>
+                          <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH4.jpeg" alt="">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH5.jpeg" alt="">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH6.jpeg" alt="">
+                        </div>
+                        <div class="mySlides2 fade">
+                            <img src="images/projects/Travel Helper/TH7.jpeg" alt="">
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="web-development">Disaster Management System</h3>
+                        <h3 class="web-development">Travel Helper</h3>
                         <p>
-                            I am Nuwani Wijesekara, an enthusiastic third-year undergraduate of Faculty of Engineerin
+                            A mobile application for travelers, developed in Kotlin with Firebase, to ensure a comfortable and exploratory journey.
                         </p>
                         <div class="link">
                             <a href="#" class="btn"><i class='bx bxs-video ' ></i></a>
-                            <a href="#" class="btn"><i class='bx bxl-github' ></i></a>
+                            <a href="https://github.com/WijesekaraDNM/Travel-Helper.git" class="btn"><i class='bx bxl-github' ></i></a>
                         </div>
                     </div>
                 </div>
@@ -487,9 +522,27 @@
         <!--contact-->
         <section class="contacts" id="contacts">
             <h2>Contact <span>Me</span></h2>
-            <!-- <form action="https://api.web3forms.com/submit" method="POST" class="contact-form"> -->
-            <form action="#" class="contact-form">    
-                <!-- <input type="hidden" name="access_key" value="81070104-ef0a-4c47-ad26-c4a6462e793a"> -->
+            <div class="contacts1">
+                <div class="contact_info">
+                    <div class="contact-box">
+                        <i class='bx bxs-edit-location' style='color:#ffffff' ></i><a class="font">230, Nakandalagoda, Dharga Town</a>
+                    </div>            
+                </div>
+                <div class="contact_info">
+                    <div class="contact-box">
+                        <i class='bx bxs-phone' style='color:#ffffff'  ></i><a>0764287808</a>
+                    </div>      
+                </div>
+                <div class="contact_info">
+                    <div class="contact-box">
+                        <i class='bx bxs-envelope' style='color:#ffffff' ></i><a  href="https://mail.google.com/mail/?view=cm&fs=1&to=dnm.wijesekara@gmail.com">dnm.wijesekara@gmail.com</a>
+                    </div>    
+                </div>
+            </div>  
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+             
+            <!-- <form action="#" class="contact-form">     -->
+                <input type="hidden" name="access_key" value="81070104-ef0a-4c47-ad26-c4a6462e793a">
                 <div class="inline">
                     <div class="input-border field">
                         <input name="full name" type="text" class="item" placeholder="Full Name" id="name" >
@@ -520,8 +573,8 @@
             </form>
         </section>
         <!--custom js-->
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
         <script src="script.js"></script>
     </body>
 </html>
