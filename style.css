@@ -92,7 +92,7 @@ input:focus {
     left: 0;
     width: 100%;
     background-color: var(--bg-color);
-    padding: 2rem 9% ;
+    padding: 2rem 5% ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,16 +107,40 @@ input:focus {
     cursor:default;
 }
 
-.navbar a {
+.menu a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 3rem;
     transition: .3s;
+    right: 0;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.menu a:hover,
+.menu a.active {
     color: var(--main-color);
+}
+
+.open-menu, .close-menu {
+    position: absolute;
+    color: var(--text-color);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-30%);
+}
+.close-menu {
+    top: 10%;
+    right: 2rem;
+    transform: translateY(-30%);
+}
+#check {
+    display: none;
 }
 
 #menu-icon {
@@ -148,6 +172,7 @@ input:focus {
     justify-content: center;
     top: 0;
     margin-bottom: 20%;
+    margin-left: 10%;
 }
 
 .img-box img {
@@ -172,7 +197,7 @@ input:focus {
     height: 100%;
     z-index: -1;
     top: 25%;
-    left: 10%;
+    left: 14%;
 }
 .liquid-shape path {
     box-shadow: 0 0 100rem 0 var(--main-color);
@@ -180,9 +205,9 @@ input:focus {
 
 .liquid-shape2 {
     position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 15%;
+    z-index: 0;
+    top: 49%;
+    left: 20%;
     height: 100%;
     width: 100%;
 }
@@ -334,12 +359,15 @@ span {
     }
     .about-img {
         justify-content: center;
+        display: flex;
 
     }
     .about-img img{
         width: 100%;
         height: 100%;
         object-fit: cover; 
+        border: 0.5rem solid var(--main-color);
+        box-sizing: border-box;
     }
 }
 
@@ -351,6 +379,7 @@ span {
     justify-content: center;
     margin-right: 5rem;
     border-radius: 50%;
+    border: 0.5rem solid var(--main-color);
     /* box-shadow: 0 0 0 10rem var(--main-color); */
 }
 
@@ -383,7 +412,7 @@ span {
 
 .education-container{
     width: 100% ;
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     justify-content: center;
 
@@ -392,9 +421,12 @@ span {
 .timeline {
     position: relative;
     max-width: 80%;
-    height: 100vh;
-    margin: 3rem auto;
-  }
+    height: 80vh;
+    margin: 5rem auto;
+    justify-content: center;
+    align-items: center;
+
+}
 
   /* The actual timeline (the vertical ruler) */
 .timeline::after {
@@ -406,10 +438,10 @@ span {
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-  }
+}
   
-  .container {
-    padding: 30px 60px;
+.container {
+    padding: 20px 50px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -419,45 +451,34 @@ span {
     border: 1px solid var(--main-color);
     justify-content: center;
     align-items: center;
-  }
-  .container.left:target{
+}
+.container.left:target{
     left: 0;
-  }
-  
-  .container.right:target{
+}
+
+.container.right:target{
     right: 0;
-  }
+}
 
-  .container.animate.left{
+.container.animate.left{
     animation: slideFromLeft 5s ease forwards;
-  }
-  
-  .container.animate.right{
-    animation: slideFromRight 5s ease forwards;
-  }
-  
-  .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border: 10px solid white;
-    border-radius: 50%;
-    right: -18px;
-    top: 15px;
-    z-index: 1;
-  }
+}
 
-  
-  .left {
+.container.animate.right{
+    animation: slideFromRight 5s ease forwards;
+}
+
+
+
+.left {
     left: 0;
     text-align: end;
-  }
-  
-  .right {
+}
+
+.right {
     left: 50% ;
     text-align: start;
-  }
+}
 
   /* Add arrows to the left container (pointing right) */
 .left::before {
@@ -472,7 +493,7 @@ span {
     border-width: 20px 0 20px 20px;
     border-color: transparent transparent transparent white;
     transition: all 0.5s ease-in-out;
-  }
+}
 
   /* Add arrows to the right container (pointing left) */
 .right::before {
@@ -487,25 +508,29 @@ span {
     border-width: 20px 20px 20px 0;
     border-color: transparent white transparent transparent;
     transition: all 0.5s ease-in-out;
-  }
+}
 
-  .container.right:hover::before{
+.container.right:hover::before{
     border: medium solid var(--main-color);
     border-color: transparent var(--main-color) transparent transparent;
     border-width: 20px 20px 20px 0;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  .container.left:hover::before{
+}
+.container.left:hover::before{
     border: medium solid var(--main-color);
     border-color: transparent transparent transparent var(--main-color);
     border-width: 20px 0 20px 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
 
-  /* Fix the circle for containers on the right side */
+ 
+/* Fix the circle for containers on the right side */
 .right::after {
-    left: 30px;
-  }
+    left: 10px; 
+    top: 15px;
+} 
+
+
   
 .container:hover {
     box-shadow: 0 8px 16px 0 var(--main-color);
@@ -520,7 +545,7 @@ span {
     height: 0;
     border: 10px solid white;
     border-radius: 50%;
-    right: 30px;
+    right: 10px;
     top: 15px;
     transition: all 0.5s ease-in-out;
   }
@@ -571,7 +596,8 @@ span {
     
     /* Make sure all circles are at the same spot */
       .left::after, .right::after {
-        left: 15px;
+        left: 10px;
+        right: -10px;
       }
     
     /* Make all right containers behave like the left ones */
@@ -704,7 +730,7 @@ span {
     width: 75%;
     animation: java 2s;
 }
-/* Professional skills */
+/* Personal skills */
 .personal-skills {
     align-items: center;
     justify-content: center;
@@ -727,9 +753,12 @@ span {
 }
 
 .box .text{
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: var(--text-color);
     font-size: 1rem;
+    padding-left: 1rem;
 }
 
 .box .text big{
@@ -738,7 +767,8 @@ span {
     letter-spacing: 1px;
     position: absolute;
     top:45%;
-    left: 50%;
+    align-items: center;
+    justify-items: center;
     transform: translate(-50%, -50%) ;
 }
 
@@ -889,8 +919,21 @@ span {
     float: left;
     object-fit: cover;
 
-  }
+}
 
+.mySlides2 {
+    /* display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute; */
+    height: 100%;
+    width:120px;
+    position: relative;
+    float: left;
+    object-fit: cover;
+
+}
 
 .projects h3 {
     display: flex;
@@ -939,6 +982,8 @@ span {
 .project-box:hover .project-image{
     transform: scale(1, 1.2);
 }
+
+/*Contact me*/
 .contacts {
     justify-content: center;
     align-items: center;
@@ -949,13 +994,52 @@ span {
     justify-content: center;
     text-align: center;
 }
+.contacts1 {
+    margin: 5rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+
+}
+.contact_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact-box {
+    display: flex;
+    gap: 1rem;
+}
+.contact-box a {
+    font-size: medium;
+    color: var(--text-color);
+    padding-top: 1rem;
+}
+
+.contact-box i {
+    display: flex;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    padding: .2rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
 .contact-form {
+    display: flex;
+    flex-direction: column;
     background-color: transparent;
     border: .2rem solid var(--main-color);
     justify-content: center;
     align-items: center;
     margin: 3%;
-    padding: 3% 0 3% 0 ;  
+    padding: 3% 0 3% 0 ; 
+    color: var(--text-color);
 }
 @media screen and (max-width: 768px) {
     .contact-form {
@@ -985,15 +1069,16 @@ span {
 } 
 
 .textArea-border {
+    display: flex;
     border: .2rem solid var(--second-bg-color);
     align-items: center;
     justify-content: center;
-    width: auto;
+    width: 90%;
     border-radius: 2rem;
-    padding: .5rem;
+    padding: 0.5rem;
     transition: 2s ease;
     border-bottom-width: .3rem;
-    margin: 1rem 6.5rem 1rem 6.5rem;
+    margin: 0.5rem;
     box-shadow: 0 0 1rem 0 var(--main-color);
     resize: none;
 }
@@ -1009,8 +1094,23 @@ span {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    padding: 1rem;
 
+}
+input::placeholder{
+    color: var(--placeholder-color);
+}
+
+textarea::placeholder{
+    color: var(--placeholder-color);
+}
+
+input:hover::placeholder{
+    color: var(--text-color2);
+}
+
+textarea:hover::placeholder{
+    color: var(--text-color2);
 }
 .error_text {
     font-size: 12px;
@@ -1173,8 +1273,8 @@ span {
 
 @-webkit-keyframes slide-show {
     0% {left: 600px;}
-    10% {left: 100px;}
-    20% {left: 100px;}
+    10% {left: 150px;}
+    20% {left: 150px;}
     30% {left: 300px;}
     40% {left: 300px;}
     50% {left: 600px;}
@@ -1184,5 +1284,48 @@ span {
     90% {left: 350px;}
     100% {left: 600px;}
 }
+@media(max-width: 720px){
+    .menu a{
+        font-size: 1.5rem;
+    }
+}
 
-
+@media(max-width: 610px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height:100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--second-bg-color);
+        z-index: 100;
+        transition: all 0.5s ease-in-out;
+    }
+    .menu a{
+        padding: 2rem;
+    }
+    .open-menu, .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu{right: 0;}
+    .contacts1{
+        grid-template-columns: 1fr;
+        margin: 1rem 0;
+        justify-items: start;
+    }
+    .contact_info{
+        margin: .5rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .left::before {
+        display: none;
+    }
+    .right::before{
+        display: none;
+    }
+}
