@@ -12,12 +12,22 @@
      
 }
 
-:root {
+/* :root {
     --bg-color: #1f242d;
     --second-bg-color: #65655E;
     --text-color:#fff;
     --text-color2:#000;
     --main-color:#0FD;
+    --placeholder-color:#a9a9a9;
+    --border-color: #add8e6;
+} */
+
+:root {
+    --bg-color: #46484b;
+    --second-bg-color:#6b6d70 ;
+    --text-color:#fff;
+    --text-color2:#000;
+    --main-color:#0ff;
     --placeholder-color:#a9a9a9;
     --border-color: #add8e6;
 }
