@@ -882,6 +882,7 @@ span {
     display: flex;
     border-radius: 15px;
     overflow: hidden;
+    width: inherit;
     grid-template-rows: 1fr auto;
     align-items: center;
     border: 2px solid var(--main-color);
@@ -898,8 +899,8 @@ span {
     align-items: center;
     justify-content: center;
     width: 100%; */
-    width: 1000px;
-    height: 250px;
+    width: inherit;
+    height: inherit;
     margin: 0 0 0 -600px;
     position: relative;
     -webkit-animation-name: slide-show;
@@ -911,7 +912,7 @@ span {
 
 .project-slideShow img{
     width: fit-content;
-    height: 250px;
+    height: inherit;
     object-fit: cover;
     opacity: .5s;
     transition: .5s;
