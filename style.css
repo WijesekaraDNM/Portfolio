@@ -1038,15 +1038,20 @@ span {
     font-size: medium;
     color: var(--text-color);
     padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .contact-box i {
     display: flex;
+    flex-wrap: wrap;
     font-size: 3rem;
-    width: 4rem;
-    height: 4rem;
-    text-align: center;
-    padding: .2rem;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    align-self: center;
     background: var(--second-bg-color);
     border: .2rem solid var(--main-color);
     border-radius: 50%;
@@ -1116,10 +1121,10 @@ span {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 1rem;
-
 }
+
 input::placeholder{
     color: var(--placeholder-color);
 }

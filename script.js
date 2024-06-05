@@ -105,67 +105,31 @@ function moreFunction(){
         }
     });   
  });  
+//contact section
+document.getElementById('contactForm').addEventListener('submit', function(event) {
 
-//contacts
-// const form = document.querySelector("contact-form");
-// const fullName = document.getElementById("name");
-// const mobileNumber = document.getElementById("mobileNumber");
-// const email = document.getElementById("emailAddress");
-// const subject = document.getElementById("emailSubject");
-// const message = document.getElementById("message");
+    const form = event.target;
+    const formData = new FormData(form);
 
-// function sendEmail(){
-
-//     const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${emailAddress.value}
-//      <br> Phone Number: ${mobileNumber.value} <br> Message: ${message.value} `;
-//     Email.send({
-//         Host : "smtp.elasticemail.com",
-//         Username : "99.wijesekara@gmail.com",
-//         Password : "1A5A24B4D3F53A317C1F90F4FF2FD80E5B4A",
-//         To : "99.wijesekara@gmail.com",
-//         From : "99.wijesekara@gmail.com",
-//         Subject : subject.value,
-//         Body : bodyMessage
-//     }).then(
-//         message => {
-//             if (message == "OK"){
-//                 Swal.fire({
-//                     title: "Success!",
-//                     text: "Message sent successfully!",
-//                     icon: "success"
-//                 });
-//             }
-//         }
-//     ).catch(
-//         error => console.error(error)
-//     );
-// }
-
-// form.addEventListener("submit", (e)=> {
-//     checkInputs();
-//     sendEmail();
-// });
-
-// function checkInputs(){
-//     const items = document.querySelectorAll(".item");
-
-//     for (const item of items ){
-//         if(item.value == ""){
-//             item.classList.add("error");
-//             item.parentElement.classList.add("error");
-
-//         }
-
-//         item.addEventListener("keyup", () =>{
-//             if (item.value != ""){
-//                 item.classList.remove("error");
-//                 item.parentElement.classList.remove("error");
-//             }
-//             else{
-//                 item.classList.add("error");
-//                 item.parentElement.classList.add("error");
-//             }
-//         })
-//     }
-// }
-
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Clear each input field individually
+            document.getElementById('name').value = '';
+            document.getElementById('mobileNumber').value = '';
+            document.getElementById('emailAddress').value = '';
+            document.getElementById('emailSubject').value = '';
+            document.getElementById('message').value = '';
+        } else {
+            alert('There was an error submitting the form. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again.');
+    });
+});
