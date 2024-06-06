@@ -1354,7 +1354,7 @@ textarea:hover::placeholder{
         overflow-x:hidden;
     }
     section {
-        padding: 100px 2%;
+        padding: 100px 4%;
     }
     .changing-text {
         font-size: 1rem;
