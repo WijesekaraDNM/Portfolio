@@ -394,8 +394,9 @@ span {
     justify-content: center;
     margin-right: 5rem;
     border-radius: 50%;
-    border: 1rem solid var(--bg-color);
-    /* box-shadow: 0 0 0 10rem var(--main-color); */
+    border: 1rem solid var(--second-bg-color);
+
+    box-shadow: 0 0 10rem 0 var(--main-color);
 }
 
 .heading {
@@ -464,7 +465,7 @@ span {
     height: auto;
     margin: 20px 50px 10px 0;
     border-radius: 2rem;
-    border: 1px solid var(--main-color);
+    border: 3px solid var(--main-color);
     justify-content: center;
     align-items: center;
 }
@@ -743,7 +744,7 @@ span {
     animation: javascript 2s;
 }
 .skill-bar .bar .java {
-    width: 75%;
+    width: 80%;
     animation: java 2s;
 }
 /* Personal skills */
