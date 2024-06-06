@@ -1353,6 +1353,9 @@ textarea:hover::placeholder{
         font-size: 45%;
         overflow-x:hidden;
     }
+    section {
+        padding: 10px 10%;
+    }
     .changing-text {
         font-size: 1rem;
         font-weight: 600;
