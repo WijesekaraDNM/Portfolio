@@ -633,10 +633,7 @@ span {
     background: var(--bg-color);
 
 }
-.skills h2 {
-    font-size: 5.6rem;
 
-}
 .skills i {
     font-size: 10rem;
     background-color: transparent;
@@ -874,6 +871,8 @@ span {
     font-size: 1.6rem;
     margin:1rem 0 3rem;
 }
+
+
 /* projects */
 .projects{
     background-color: var(--second-bg-color);
@@ -1007,7 +1006,6 @@ span {
     align-items: center;
 }
 .contacts h2 {
-    font-size: 5rem;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -1350,7 +1348,7 @@ textarea:hover::placeholder{
 
 @media(max-width: 610px){
     html {
-        font-size: 50%;
+        font-size: 45%;
         overflow-x:hidden;
     }
     .menu{
@@ -1392,9 +1390,7 @@ textarea:hover::placeholder{
     }
     .inline {
         display: flex;
-        position: relative;
         flex-direction: column;
-        width: 100%;
     }
     
    
