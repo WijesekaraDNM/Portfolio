@@ -389,7 +389,7 @@ span {
 }
 
 
-.about-img img.animate {
+.about-img img {
     width: 250px;
     height: 250px;
     align-items: center;
@@ -398,7 +398,6 @@ span {
     border-radius: 50%;
     border: 1rem solid var(--second-bg-color);
     box-shadow: 0 0 10rem 0 var(--main-color);
-    animation: slideFromLeft 2s ease-in-out 0s 1 forwards;
 }
 
 .heading {
@@ -425,6 +424,9 @@ span {
     animation: opacity 4s ease-in-out 0s 1 forwards;
 }
 
+img.animate {
+    animation: slideFromLeft 2s ease-in-out 0s 1 forwards;
+}
 
 .about-content .btn.animate {
     animation: slideFromBottom  2s ease-in-out 0s 1 forwards;
