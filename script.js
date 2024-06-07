@@ -48,10 +48,20 @@ window.addEventListener('scroll', function() {
     var element0 = document.getElementById('targetElement0');
     var element1 = document.getElementById('targetElement1');
     var element2 = document.getElementById('targetElement2');
+    var element3 = document.getElementById('targetElement3');
+    var element4 = document.getElementById('targetElement4');
+    var element5 = document.getElementById('targetElement5');
+    var element6 = document.getElementById('targetElement6');
+    var element7 = document.getElementById('moreId');
 
     animateIfInView(element0);
     animateIfInView(element1);
     animateIfInView(element2);
+    animateIfInView(element3);
+    animateIfInView(element4);
+    animateIfInView(element5);
+    animateIfInView(element6);
+    animateIfInView(element7);
 });
 
 function animateIfInView(element) {
@@ -67,6 +77,29 @@ function animateIfInView(element) {
 
 
 // about
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const observerOptions = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: 0.1
+//     };
+
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('in-view');
+//             } else {
+//                 entry.target.classList.remove('in-view');
+//             }
+//         });
+//     }, observerOptions);
+
+//     const aboutElements = document.querySelectorAll('.about-content h2, .about-content h3, .about-content p, .about-img img');
+//     aboutElements.forEach(element => {
+//         observer.observe(element);
+//     });
+// });
 
 function moreFunction(){
     var dots = document.getElementById("dotsId");

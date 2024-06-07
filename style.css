@@ -389,7 +389,7 @@ span {
 }
 
 
-.about-img img {
+.about-img img.animate {
     width: 250px;
     height: 250px;
     align-items: center;
@@ -397,8 +397,8 @@ span {
     margin-right: 5rem;
     border-radius: 50%;
     border: 1rem solid var(--second-bg-color);
-
     box-shadow: 0 0 10rem 0 var(--main-color);
+    animation: slideFromLeft 2s ease-in-out 0s 1 forwards;
 }
 
 .heading {
@@ -406,19 +406,28 @@ span {
     font-size: 4.5rem;
 }
 
-.about-content h2 {
+.about-content h2.animate {
     text-align: left;
     line-height: 1.2;
+    animation: slideFromTop 2s ease-in-out 0s 1 forwards;
 }
 
-.about-content h3 {
+.about-content h3.animate {
     font-size: 2.6rem;
+    animation: slideFromTop 2s ease-in-out 0s 1 forwards;
+
 }
 
-.about-content p {
+.about-content p.animate {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
     text-align: justify;
+    animation: opacity 4s ease-in-out 0s 1 forwards;
+}
+
+
+.about-content .btn.animate {
+    animation: slideFromBottom  2s ease-in-out 0s 1 forwards;
 }
 
 .more {
@@ -1327,6 +1336,25 @@ textarea:hover::placeholder{
     to {
         transform: translateX(0);
       } 
+}
+@keyframes slideFromTop{
+    from {
+        transform: translateY(-100%);
+        background-color: var(--second-bg-color);
+      }
+      to {
+        transform: translateY(0);
+      }
+}
+
+@keyframes slideFromBottom{
+    from {
+        transform: translateY(100%);
+        background-color: var(--second-bg-color);
+      }
+      to {
+        transform: translateY(0);
+      }
 }
 
 @-webkit-keyframes slide-show {
