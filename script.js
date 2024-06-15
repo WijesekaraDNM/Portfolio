@@ -70,8 +70,6 @@ function animateIfInView(element) {
     // Check if the top of the element is within the viewport
     if (position.top >= 0 && position.top <= window.innerHeight) {
         element.classList.add('animate');
-    } else {
-        element.classList.remove('animate');
     }
 }
 
